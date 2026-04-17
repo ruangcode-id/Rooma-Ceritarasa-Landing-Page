@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --color-primary: #e63946; /* Warm red/orange for restaurant appetite */
+  --font-sans: 'Times New Roman Condensed', 'Times New Roman', Times, serif;
+  --color-primary: #e63946;
   --color-primary-dark: #d62828;
   --color-secondary: #f4a261;
   --color-dark: #1d3557;
@@ -12,7 +12,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -21,10 +22,10 @@ html, body {
 
 body {
   font-family: var(--font-sans);
+  font-stretch: condensed;
   @apply bg-white dark:bg-bg-dark text-gray-900 dark:text-gray-100 antialiased;
 }
 
-/* Glassmorphism utility */
 .glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -37,7 +38,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Halftone/Paper noise texture for light backgrounds */
 .bg-texture {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
 }
