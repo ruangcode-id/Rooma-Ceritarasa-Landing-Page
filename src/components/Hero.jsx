@@ -11,12 +11,8 @@ const Hero = () => {
           src={dummyVideo}
           autoPlay
           muted
+          loop
           playsInline
-          onTimeUpdate={(e) => {
-            if (e.target.currentTime >= 6) {
-              e.target.currentTime = 0;
-            }
-          }}
         />
       </div>
 
