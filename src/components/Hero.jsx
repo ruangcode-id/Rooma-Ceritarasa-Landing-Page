@@ -27,8 +27,10 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            className="px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-full font-medium tracking-wide transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-primary/50"
             href="https://api.whatsapp.com/send/?phone=6285725539262&text&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-full font-medium tracking-wide transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-primary/50" 
           >
             Make a Reservation
           </a>
