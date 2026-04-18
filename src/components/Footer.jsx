@@ -1,8 +1,9 @@
 import React from 'react';
+import { InstagramLogo, WhatsappLogo } from '@phosphor-icons/react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#fcfbf9] bg-texture text-gray-800 pt-20 pb-10 px-6 min-h-screen flex flex-col justify-between">
+    <footer className="bg-[#fcfbf9] bg-texture text-gray-800 pt-20 pb-10 px-6 flex flex-col justify-between">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 w-full mt-auto mb-auto">
 
         {/* Brand Section */}
@@ -16,11 +17,11 @@ const Footer = () => {
           <div className="flex space-x-4">
             <a href="https://www.instagram.com/rooma.ceritarasa/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/70 shadow-sm border border-black/5 flex items-center justify-center transition-all hover:bg-primary hover:text-white hover:border-primary text-gray-600">
               <span className="sr-only">Instagram</span>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
+              <InstagramLogo size={20} />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-white/70 shadow-sm border border-black/5 flex items-center justify-center transition-all hover:bg-primary hover:text-white hover:border-primary text-gray-600">
+            <a href="https://tr.ee/x_mE3wmVJZ" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/70 shadow-sm border border-black/5 flex items-center justify-center transition-all hover:bg-primary hover:text-white hover:border-primary text-gray-600">
               <span className="sr-only">WhatsApp</span>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 0C5.366 0 0 5.366 0 11.99c0 2.124.553 4.108 1.503 5.86L.015 24l6.326-1.637A11.93 11.93 0 0 0 11.99 24c6.623 0 11.99-5.366 11.99-11.99S18.613 0 11.99 0zm0 21.986a9.92 9.92 0 0 1-5.074-1.39l-.364-.216-3.768.975.99-3.642-.236-.375A9.927 9.927 0 0 1 2.01 11.99c0-5.502 4.475-9.976 9.98-9.976 5.503 0 9.979 4.474 9.979 9.976 0 5.504-4.476 9.976-9.98 9.976zm5.485-7.48c-.302-.15-1.783-.88-2.062-.98-.278-.103-.482-.15-.685.152-.204.303-.781.98-.957 1.182-.178.204-.356.228-.658.077-1.353-.67-2.613-1.677-3.411-2.946-.214-.34.21-.318.508-.91.077-.152.038-.284-.002-.436-.04-.15-.685-1.65-9.39-2.261-.25-.06-.5-.063-.685-.063-.356 0-.934.135-1.42.67-.486.535-1.854 1.838-1.854 4.48s1.898 5.194 2.164 5.549c.264.355 3.738 5.823 9.176 8.04 1.295.528 2.305.844 3.092 1.08.118-.306.66-.46 1.344-.658.683-.197 1.258-.698 1.405-1.536.147-.838.147-1.556.103-1.706-.044-.15-.162-.24-.464-.39z" /></svg>
+              <WhatsappLogo size={20} />
             </a>
           </div>
         </div>
