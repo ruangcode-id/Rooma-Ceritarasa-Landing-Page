@@ -1,40 +1,29 @@
 import React from 'react';
-import dummyVideo from '../assets/dummy_video.mp4';
+import dummyVideo from '../assets/dummy_video.mov';
 
 const Hero = () => {
   return (
-    <div className="relative h-screen w-full overflow-hidden flex flex-col justify-center items-center">
-      {/* Background Video */}
-      <div className="absolute inset-0 z-0 brightness-50 transform scale-105 transition-transform duration-1000">
-        <video
-          className="w-full h-full object-cover"
-          src={dummyVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-      </div>
+    <div className="relative h-screen w-full overflow-hidden">
+      {/* Background Video (full screen) */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src={dummyVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
 
-      {/* Vignette Overlay */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle,transparent_20%,rgba(0,0,0,0.8)_120%)] pointer-events-none" />
-
-      {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center text-white">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 drop-shadow-lg">
-          Rooma
-        </h1>
-
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a
-            href="https://api.whatsapp.com/send/?phone=6285725539262&text&type=phone_number&app_absent=0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-full font-medium tracking-wide transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-primary/50" 
-          >
-            Make a Reservation
-          </a>
-        </div>
+      {/* Overlay (absolute) */}
+      <div className="absolute inset-0 z-10 grid place-items-center px-6 text-center">
+        <a
+          href="https://api.whatsapp.com/send/?phone=6285725539262&text&type=phone_number&app_absent=0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-full px-8 py-3 text-base md:px-10 md:py-4 md:text-xl text-white bg-white/25 hover:bg-white/30 backdrop-blur-md transition-colors transform translate-y-20 md:translate-y-28"
+        >
+          Make a reservation
+        </a>
       </div>
     </div>
   );
