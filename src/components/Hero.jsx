@@ -1,5 +1,5 @@
 import React from 'react';
-import dummyVideo from '../assets/hero.mp4';
+import dummyVideo from '../assets/hero.mov';
 
 const Hero = () => {
   return (
@@ -20,7 +20,7 @@ const Hero = () => {
           href="https://api.whatsapp.com/send/?phone=6285725539262&text&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full px-8 py-3 text-base md:px-10 md:py-4 md:text-xl text-white bg-white/25 hover:bg-white/30 backdrop-blur-md transition-colors transform translate-y-20 md:translate-y-28"
+          className="inline-flex items-center justify-center rounded-full px-8 py-3 text-base md:px-10 md:py-4 md:text-xl text-white bg-white/25 hover:bg-white/30 backdrop-blur-md transition-colors transform translate-y-20 md:translate-y-32"
         >
           Make a reservation
         </a>

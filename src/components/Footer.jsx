@@ -61,10 +61,6 @@ const Footer = () => {
 
       <div className="mt-16 pt-8 border-t border-black/10 text-center text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto font-medium">
         <p>&copy; {new Date().getFullYear()} Rooma Ceritarasa. All rights reserved.</p>
-        <div className="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-        </div>
       </div>
     </footer>
   );
