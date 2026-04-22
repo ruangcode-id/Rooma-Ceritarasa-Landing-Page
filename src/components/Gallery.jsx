@@ -1,10 +1,10 @@
 import React from 'react';
-import slider1 from '../assets/slider1.JPEG';
-import slider2 from '../assets/slider2.JPEG';
-import slider3 from '../assets/slider3.JPEG';
-import slider4 from '../assets/slider4.JPEG';
-import slider5 from '../assets/slider5.JPEG';
-import slider6 from '../assets/slider6.JPEG';
+import slider1 from '../assets/slider1.webp';
+import slider2 from '../assets/slider2.webp';
+import slider3 from '../assets/slider3.webp';
+import slider4 from '../assets/slider4.webp';
+import slider5 from '../assets/slider5.webp';
+import slider6 from '../assets/slider6.webp';
 
 const Gallery = () => {
   const images = [
@@ -52,4 +52,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default React.memo(Gallery);

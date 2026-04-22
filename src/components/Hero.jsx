@@ -1,10 +1,10 @@
 import React from 'react';
-import dummyVideo from '../assets/hero.mov';
+import dummyVideo from '../assets/hero.mp4';
 
 const Hero = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      {/* Background Video (full screen) */}
+      {/* Background Video */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
         src={dummyVideo}
@@ -14,7 +14,7 @@ const Hero = () => {
         playsInline
       />
 
-      {/* Overlay (absolute) */}
+      {/* Overlay */}
       <div className="absolute inset-0 z-10 grid place-items-center px-6 text-center">
         <a
           href="https://api.whatsapp.com/send/?phone=6285725539262&text&type=phone_number&app_absent=0"
@@ -29,4 +29,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default React.memo(Hero);
