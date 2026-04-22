@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from './components/Hero'
+import Gallery from './components/Gallery'
 import Footer from './components/Footer'
 
 function App() {
@@ -20,8 +21,11 @@ function App() {
         {/* Soft top gradient transition with non-linear easing to prevent 'hard line' perception */}
         <div 
           className="absolute bottom-full left-0 w-full h-64 pointer-events-none" 
-          style={{ background: 'linear-gradient(to top, rgba(252,251,249,1) 0%, rgba(252,251,249,0.85) 15%, rgba(252,251,249,0.65) 35%, rgba(252,251,249,0.45) 55%, rgba(252,251,249,0.25) 75%, rgba(252,251,249,0.1) 88%, rgba(252,251,249,0) 100%)' }}
+          style={{ background: 'linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 15%, rgba(255,255,255,0.65) 35%, rgba(255,255,255,0.45) 55%, rgba(255,255,255,0.25) 75%, rgba(255,255,255,0.1) 88%, rgba(255,255,255,0) 100%)' }}
         />
+        <div className="bg-white">
+          <Gallery />
+        </div>
         <Footer />
       </div>
     </div>
