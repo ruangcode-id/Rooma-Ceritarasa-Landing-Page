@@ -26,17 +26,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Explore Links
-        <div>
-          <h3 className="text-lg font-semibold mb-4 text-gray-900">Explore</h3>
-          <ul className="space-y-3">
-            <li><a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">About</a></li>
-            <li><a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">Menu</a></li>
-            <li><a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">Reservation</a></li>
-            <li><a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">Contact</a></li>
-          </ul>
-        </div> */}
-
         {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold mb-4 text-gray-900">Contact</h3>
