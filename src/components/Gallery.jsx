@@ -1,5 +1,6 @@
 // src/components/Gallery.jsx
 import { useRef, useEffect, useCallback } from 'react';
+import logo from '../assets/logo_no_background.png';
 import slider1 from '../assets/slider1.webp';
 import slider2 from '../assets/slider2.webp';
 import slider3 from '../assets/slider3.webp';
@@ -65,11 +66,16 @@ export default function Gallery() {
 
   return (
     <section ref={sectionRef} className="bg-white py-24 relative w-full overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 reveal">
-        <h2 className="text-5xl md:text-6xl font-serif text-black uppercase tracking-widest text-center">
-          Gallery
-        </h2>
-        <div className="w-24 h-px bg-gray-400 mx-auto mt-8 reveal" style={{ transitionDelay: '200ms' }}></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 reveal">
+        <div className="flex justify-center">
+          <img
+            src={logo}
+            alt="Rooma"
+            className="h-10 sm:h-12 w-auto object-contain"
+            decoding="async"
+            fetchPriority="high"
+          />
+        </div>
       </div>
       
       <div 
@@ -86,7 +92,7 @@ export default function Gallery() {
             key={index}
             ref={(el) => (cardRefs.current[index] = el)}
             style={{ '--px': '0px' }}
-            className="snap-center shrink-0 w-[90vw] sm:w-[65vw] md:w-[50vw] lg:w-[40vw] xl:w-[30vw] aspect-4/5 rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] hover:shadow-2xl transition-shadow duration-500 relative group cursor-grab active:cursor-grabbing"
+            className="snap-center shrink-0 w-[90vw] sm:w-[65vw] md:w-[50vw] lg:w-[40vw] xl:w-[30vw] aspect-4/5 overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] hover:shadow-2xl transition-shadow duration-500 relative group cursor-grab active:cursor-grabbing"
           >
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 z-10 pointer-events-none"></div>
             
