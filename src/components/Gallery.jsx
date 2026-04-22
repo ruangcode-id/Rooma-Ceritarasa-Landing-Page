@@ -33,7 +33,7 @@ const Gallery = () => {
         {images.map((image, index) => (
           <div 
             key={index} 
-            className="snap-center shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-[35vw] xl:w-[25vw] aspect-4/5 rounded-xl overflow-hidden shadow-2xl relative group cursor-grab active:cursor-grabbing"
+            className="snap-center shrink-0 w-[90vw] sm:w-[65vw] md:w-[50vw] lg:w-[40vw] xl:w-[30vw] aspect-4/5 rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] relative group cursor-grab active:cursor-grabbing"
           >
             {/* Adding a subtle overlay on hover */}
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 z-10 pointer-events-none"></div>

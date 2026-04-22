@@ -4,7 +4,7 @@ import { InstagramLogo, WhatsappLogo } from '@phosphor-icons/react';
 const Footer = () => {
   return (
     <footer className="bg-[#fcfbf9] bg-texture text-gray-800 pt-20 pb-10 px-6 flex flex-col justify-between">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 w-full mt-auto mb-auto">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 w-full mt-auto mb-auto">
 
         {/* Brand Section */}
         <div className="col-span-1 md:col-span-1">
@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Explore Links */}
+        {/* Explore Links
         <div>
           <h3 className="text-lg font-semibold mb-4 text-gray-900">Explore</h3>
           <ul className="space-y-3">
@@ -35,7 +35,7 @@ const Footer = () => {
             <li><a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">Reservation</a></li>
             <li><a href="#" className="text-gray-600 hover:text-primary font-medium transition-colors">Contact</a></li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Contact Info */}
         <div>
@@ -47,7 +47,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center">
               <span className="text-primary mr-2">📞</span>
-              <span>+62 123 4567 890</span>
+              <span>+62 857 2553 9262</span>
             </li>
             <li className="flex items-center">
               <span className="text-primary mr-2">✉️</span>
