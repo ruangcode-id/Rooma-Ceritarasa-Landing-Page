@@ -33,7 +33,7 @@ const Gallery = () => {
         {images.map((image, index) => (
           <div 
             key={index} 
-            className="snap-center shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-[35vw] xl:w-[25vw] aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative group cursor-grab active:cursor-grabbing"
+            className="snap-center shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-[35vw] xl:w-[25vw] aspect-4/5 rounded-xl overflow-hidden shadow-2xl relative group cursor-grab active:cursor-grabbing"
           >
             {/* Adding a subtle overlay on hover */}
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 z-10 pointer-events-none"></div>
@@ -41,7 +41,6 @@ const Gallery = () => {
             <img 
               src={image.src} 
               alt={image.alt}
-              loading={index < 2 ? "eager" : "lazy"}
               decoding="async"
               fetchPriority={index === 0 ? "high" : "auto"}
               className="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-105"
