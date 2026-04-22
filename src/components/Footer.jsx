@@ -49,10 +49,6 @@ const Footer = () => {
               <span className="text-primary mr-2">📞</span>
               <span>+62 857 2553 9262</span>
             </li>
-            <li className="flex items-center">
-              <span className="text-primary mr-2">✉️</span>
-              <span>hello@roomaceritarasa.com</span>
-            </li>
           </ul>
         </div>
 
