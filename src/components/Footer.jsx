@@ -8,19 +8,19 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 w-full mt-auto mb-auto">
 
         <div className="col-span-1 md:col-span-1">
-          <div className="mb-4 h-12 sm:h-14 flex items-center drop-shadow-sm">
+          <div className="mb-4 h-20 sm:h-24 md:h-28 flex items-center drop-shadow-sm">
             <img
               src={logo}
               alt="Rooma Ceritarasa"
-              className="h-14 sm:h-16 w-auto object-contain"
+              className="h-20 sm:h-24 md:h-28 w-auto object-contain"
               decoding="async"
               fetchPriority="high"
             />
           </div>
           <p className="text-gray-600 font-light mb-6 leading-relaxed">
-            <span className="block">Refined comfort dish, intimate casual dining</span>
+            <span className="block">Refined Comfort Dish, Intimate Casual Dining</span>
             <span className="block">3PM - 10 PM</span>
-            <span className="block">Closed On Mondays !!!</span>
+            <span className="block">Closed On Mondays</span>
           </p>
           <div className="flex space-x-4">
             <a href="https://www.instagram.com/rooma.ceritarasa/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white shadow-sm border border-black/5 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-primary hover:text-white hover:border-primary text-gray-600">
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="mb-4 h-12 sm:h-14 flex items-center">
+          <div className="mb-4 h-20 sm:h-24 md:h-28 flex items-center">
             <h3 className="text-lg font-semibold text-gray-900">Contact</h3>
           </div>
           <ul className="space-y-3 text-gray-600 font-medium">
@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <div className="mb-4 h-12 sm:h-14 flex items-center">
+          <div className="mb-4 h-20 sm:h-24 md:h-28 flex items-center">
             <h3 className="text-lg font-semibold text-gray-900">Session Times</h3>
           </div>
           <ul className="space-y-3 text-gray-600 flex flex-col justify-center h-full pt-2">
