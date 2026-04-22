@@ -71,7 +71,7 @@ export default function Gallery() {
           <img
             src={logo}
             alt="Rooma"
-            className="h-10 sm:h-12 w-auto object-contain"
+            className="h-16 sm:h-20 md:h-24 w-auto object-contain"
             decoding="async"
             fetchPriority="high"
           />
