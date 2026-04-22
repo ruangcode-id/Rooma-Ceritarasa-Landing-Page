@@ -1,16 +1,19 @@
-# React + Vite
+# Rooma Ceritarasa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Rooma Ceritarasa** official website repository. This project is a modern, high-performance landing page designed to provide an elegant and immersive digital experience for Rooma Ceritarasa's visitors.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Modern & Immersive UI**: Designed with a clean aesthetic, featuring a full-screen background video and a smooth, hardware-accelerated horizontal scroll-snap gallery.
+- **Maximum Performance**: 
+  - Heavy assets are highly optimized (images use `WebP` format, videos are compressed to `MP4` H.264).
+  - Intelligent resource loading using `fetchPriority` and `loading="lazy"`.
+  - Implements React Code-Splitting (`React.lazy` and `Suspense`) to load below-the-fold components asynchronously.
+  - Utilizes `React.memo()` for static components to prevent unnecessary re-renders.
+- **Fully Responsive**: Seamlessly adapts to mobile, tablet, and desktop screens using Tailwind CSS.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Framework**: React 19 + Vite
+- **Styling**: Tailwind CSS v4
+- **Icons**: Phosphor Icons
