@@ -108,6 +108,10 @@ export default function Gallery() {
           </div>
         ))}
       </div>
+
+      <div className="px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
+        &lt; slide photos &gt;
+      </div>
     </section>
   );
 }
