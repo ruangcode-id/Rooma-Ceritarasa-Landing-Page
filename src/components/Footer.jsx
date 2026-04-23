@@ -54,7 +54,7 @@ export default function Footer() {
           <div className="mb-4 h-20 sm:h-24 md:h-28 flex items-center">
             <h3 className="text-lg font-semibold text-gray-900">Session Times</h3>
           </div>
-          <ul className="space-y-3 text-gray-600 flex flex-col justify-center h-full pt-2">
+          <ul className="space-y-3 text-gray-600 font-medium">
             <li className="flex justify-between border-b border-dashed border-gray-300 pb-2 transition-transform duration-300 hover:translate-x-2 cursor-default">
               <span className="font-semibold text-gray-800">15.00 - 17.00</span>
               <span className="w-28 text-right text-sm text-gray-600">Session one</span>
