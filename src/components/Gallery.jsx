@@ -77,8 +77,8 @@ export default function Gallery() {
           />
         </div>
       </div>
-      
-      <div 
+
+      <div
         ref={(node) => {
           scrollRef.current = node;
           if (node) node.classList.add('reveal');
@@ -88,17 +88,17 @@ export default function Gallery() {
         style={{ scrollBehavior: 'smooth', transitionDelay: '300ms' }}
       >
         {images.map((image, index) => (
-          <div 
+          <div
             key={index}
             ref={(el) => (cardRefs.current[index] = el)}
             style={{ '--px': '0px' }}
             className="snap-center shrink-0 w-[90vw] sm:w-[65vw] md:w-[50vw] lg:w-[40vw] xl:w-[30vw] aspect-4/5 overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] hover:shadow-2xl transition-shadow duration-500 relative group cursor-grab active:cursor-grabbing"
           >
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 z-10 pointer-events-none"></div>
-            
+
             <div className="w-full h-full translate-x-(--px) will-change-transform">
-              <img 
-                src={image.src} 
+              <img
+                src={image.src}
                 alt={image.alt}
                 decoding="async"
                 fetchPriority={index === 0 ? "high" : "auto"}
@@ -110,7 +110,7 @@ export default function Gallery() {
       </div>
 
       <div className="px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
-        &lt; slide photos &gt;
+        slide photos
       </div>
     </section>
   );
