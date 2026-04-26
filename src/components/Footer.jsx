@@ -63,7 +63,7 @@ export default function Footer() {
           />
           <p className="text-gray-600 font-light leading-relaxed space-y-1">
             <span className="block">Refined Comfort Dish, Intimate Casual Dining</span>
-            <span className="block">3PM – 10 PM</span>
+            <span className="block">3PM - 10 PM</span>
             <span className="block">Closed On Mondays</span>
           </p>
           <div className="flex space-x-4 mt-6">
