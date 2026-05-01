@@ -10,6 +10,14 @@ import slider4 from '../assets/slider4.webp';
 import slider5 from '../assets/slider5.webp';
 import slider6 from '../assets/slider6.webp';
 
+import event1 from '../assets/event1.PNG';
+import event2 from '../assets/event2.PNG';
+import event3 from '../assets/event3.PNG';
+import event4 from '../assets/event4.PNG';
+import event5 from '../assets/event5.PNG';
+import event6 from '../assets/event6.PNG';
+import event7 from '../assets/event7.PNG';
+
 // --- Configuration ---
 const CONFIG = {
   parallax: { factor: -0.15 },
@@ -24,6 +32,16 @@ const GALLERY_IMAGES = [
   { src: slider4, alt: 'Gallery Image 4' },
   { src: slider5, alt: 'Gallery Image 5' },
   { src: slider6, alt: 'Gallery Image 6' },
+];
+
+const COLLAB_IMAGES = [
+  { src: event1, alt: 'Special Collaboration 1' },
+  { src: event2, alt: 'Special Collaboration 2' },
+  { src: event3, alt: 'Special Collaboration 3' },
+  { src: event4, alt: 'Special Collaboration 4' },
+  { src: event5, alt: 'Special Collaboration 5' },
+  { src: event6, alt: 'Special Collaboration 6' },
+  { src: event7, alt: 'Special Collaboration 7' },
 ];
 
 // --- Custom Hooks ---
@@ -94,8 +112,12 @@ export default function Gallery() {
   const scrollRef = useRef(null);
   const cardRefs = useRef([]);
 
+  const collabScrollRef = useRef(null);
+  const collabCardRefs = useRef([]);
+
   useRevealOnScroll(sectionRef);
   const handleScroll = useParallaxScroll(scrollRef, cardRefs);
+  const handleCollabScroll = useParallaxScroll(collabScrollRef, collabCardRefs);
 
   return (
     <section ref={sectionRef} className="bg-white py-24 relative w-full overflow-hidden">
@@ -132,6 +154,31 @@ export default function Gallery() {
       </div>
 
       {/* Footer */}
+      <p className="px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
+        slide photos
+      </p>
+
+      <div className="px-4 sm:px-6 lg:px-8 mt-8 reveal" style={{ transitionDelay: `${CONFIG.reveal.delayMs}ms` }}>
+        <h3 className="text-lg font-semibold text-gray-900 text-center">Special Collaboration</h3>
+      </div>
+
+      <div
+        ref={collabScrollRef}
+        onScroll={handleCollabScroll}
+        className="reveal flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 sm:px-6 lg:px-8 pb-12 pt-6 w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] mask-edge-fading"
+        style={{ scrollBehavior: 'smooth', transitionDelay: `${CONFIG.reveal.delayMs}ms` }}
+      >
+        {COLLAB_IMAGES.map(({ src, alt }, index) => (
+          <GalleryCard
+            key={index}
+            src={src}
+            alt={alt}
+            isPriority={false}
+            cardRef={(el) => (collabCardRefs.current[index] = el)}
+          />
+        ))}
+      </div>
+
       <p className="px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
         slide photos
       </p>
