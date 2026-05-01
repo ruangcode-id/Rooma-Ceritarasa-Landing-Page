@@ -87,7 +87,7 @@ const useParallaxScroll = (scrollRef, cardRefs) => {
 };
 
 // --- Sub-Component ---
-const GalleryCard = ({ src, alt, isPriority, cardRef }) => (
+const GalleryCard = ({ src, alt, isPriority, cardRef, fit = 'cover' }) => (
   <div
     ref={cardRef}
     style={{ '--px': '0px' }}
@@ -100,7 +100,11 @@ const GalleryCard = ({ src, alt, isPriority, cardRef }) => (
         alt={alt}
         decoding="async"
         fetchPriority={isPriority ? 'high' : 'auto'}
-        className="w-full h-full object-cover object-center scale-[1.2] transition-transform duration-700 group-hover:scale-[1.25]"
+        className={
+          fit === 'contain'
+            ? 'w-full h-full object-contain object-center'
+            : 'w-full h-full object-cover object-center scale-[1.2] transition-transform duration-700 group-hover:scale-[1.25]'
+        }
       />
     </div>
   </div>
@@ -174,6 +178,7 @@ export default function Gallery() {
             src={src}
             alt={alt}
             isPriority={false}
+            fit="contain"
             cardRef={(el) => (collabCardRefs.current[index] = el)}
           />
         ))}
