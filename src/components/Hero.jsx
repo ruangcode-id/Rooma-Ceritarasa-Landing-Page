@@ -20,7 +20,7 @@ export default function Hero() {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Video dengan sedikit scale untuk menghindari black edge saat resize */}
       <video
-        className="absolute inset-0 h-full w-full object-cover scale-105 animate-subtle-zoom motion-reduce:animate-none"
+        className="absolute inset-0 h-full w-full object-cover scale-105"
         src={dummyVideo}
         autoPlay
         muted
@@ -29,14 +29,13 @@ export default function Hero() {
       />
       
       {/* Overlay dengan kontras yang sedikit lebih dalam */}
-      <div className="absolute inset-0 z-10 grid place-items-center px-6 text-center bg-linear-to-t from-black/60 via-black/10 to-black/30 relative">
-        <div className="absolute inset-0 bg-texture pointer-events-none" />
+      <div className="absolute inset-0 z-10 grid place-items-center px-6 text-center bg-linear-to-t from-black/60 via-black/10 to-black/30">
         <a
           href="https://api.whatsapp.com/send/?phone=6285725539262&text&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
           className="
-            group inline-flex items-center justify-center rounded-full relative z-10
+            group inline-flex items-center justify-center rounded-full 
             px-8 py-3 text-base md:px-10 md:py-4 md:text-xl 
             text-white font-light tracking-wide
             bg-white/15 hover:bg-white/25 
@@ -46,8 +45,7 @@ export default function Hero() {
             transition-all duration-300 ease-out 
             hover:scale-105 
             transform translate-y-20 md:translate-y-32 
-            animate-fade-in-up motion-reduce:animate-none
-            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black/30
+            animate-fade-in-up
           "
         >
           Make a reservation
