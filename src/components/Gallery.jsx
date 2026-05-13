@@ -10,20 +10,16 @@ import slider4 from '../assets/slider4.webp';
 import slider5 from '../assets/slider5.webp';
 import slider6 from '../assets/slider6.webp';
 
-import event1 from '../assets/event1.PNG';
-import event2 from '../assets/event2.PNG';
-import event3 from '../assets/event3.PNG';
-import event4 from '../assets/event4.PNG';
-import event5 from '../assets/event5.PNG';
-import event6 from '../assets/event6.PNG';
-import event7 from '../assets/event7.PNG';
-
 // --- Configuration ---
 const CONFIG = {
   parallax: { factor: -0.15 },
   observer: { threshold: 0.1, rootMargin: '0px 0px -50px 0px' },
   reveal: { delayMs: 300 },
 };
+
+// Toggle this when there is a new event.
+// When enabled, images are auto-loaded from src/assets with filename pattern: event*.*
+const SHOW_SPECIAL_COLLABORATION = false;
 
 const GALLERY_IMAGES = [
   { src: slider1, alt: 'Gallery Image 1' },
@@ -34,15 +30,19 @@ const GALLERY_IMAGES = [
   { src: slider6, alt: 'Gallery Image 6' },
 ];
 
-const COLLAB_IMAGES = [
-  { src: event1, alt: 'Special Collaboration 1' },
-  { src: event2, alt: 'Special Collaboration 2' },
-  { src: event3, alt: 'Special Collaboration 3' },
-  { src: event4, alt: 'Special Collaboration 4' },
-  { src: event5, alt: 'Special Collaboration 5' },
-  { src: event6, alt: 'Special Collaboration 6' },
-  { src: event7, alt: 'Special Collaboration 7' },
-];
+const COLLAB_IMAGE_MODULES = import.meta.glob('../assets/event*.*', {
+  eager: true,
+  import: 'default',
+});
+
+const COLLAB_IMAGES = Object.entries(COLLAB_IMAGE_MODULES)
+  .sort(([pathA], [pathB]) =>
+    pathA.localeCompare(pathB, undefined, { numeric: true, sensitivity: 'base' })
+  )
+  .map(([, src], index) => ({
+    src,
+    alt: `Special Collaboration ${index + 1}`,
+  }));
 
 // --- Custom Hooks ---
 const useRevealOnScroll = (sectionRef) => {
@@ -162,31 +162,38 @@ export default function Gallery() {
         slide photos
       </p>
 
-      <div className="px-4 sm:px-6 lg:px-8 mt-8 reveal" style={{ transitionDelay: `${CONFIG.reveal.delayMs}ms` }}>
-        <h3 className="text-lg font-semibold text-gray-900 text-center">Special Collaboration</h3>
-      </div>
+      {SHOW_SPECIAL_COLLABORATION && COLLAB_IMAGES.length > 0 ? (
+        <>
+          <div
+            className="px-4 sm:px-6 lg:px-8 mt-8 reveal"
+            style={{ transitionDelay: `${CONFIG.reveal.delayMs}ms` }}
+          >
+            <h3 className="text-lg font-semibold text-gray-900 text-center">Special Collaboration</h3>
+          </div>
 
-      <div
-        ref={collabScrollRef}
-        onScroll={handleCollabScroll}
-        className="reveal flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 sm:px-6 lg:px-8 pb-12 pt-6 w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] mask-edge-fading"
-        style={{ scrollBehavior: 'smooth', transitionDelay: `${CONFIG.reveal.delayMs}ms` }}
-      >
-        {COLLAB_IMAGES.map(({ src, alt }, index) => (
-          <GalleryCard
-            key={index}
-            src={src}
-            alt={alt}
-            isPriority={false}
-            fit="contain"
-            cardRef={(el) => (collabCardRefs.current[index] = el)}
-          />
-        ))}
-      </div>
+          <div
+            ref={collabScrollRef}
+            onScroll={handleCollabScroll}
+            className="reveal flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 sm:px-6 lg:px-8 pb-12 pt-6 w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] mask-edge-fading"
+            style={{ scrollBehavior: 'smooth', transitionDelay: `${CONFIG.reveal.delayMs}ms` }}
+          >
+            {COLLAB_IMAGES.map(({ src, alt }, index) => (
+              <GalleryCard
+                key={index}
+                src={src}
+                alt={alt}
+                isPriority={false}
+                fit="contain"
+                cardRef={(el) => (collabCardRefs.current[index] = el)}
+              />
+            ))}
+          </div>
 
-      <p className="px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
-        slide photos
-      </p>
+          <p className="px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
+            slide photos
+          </p>
+        </>
+      ) : null}
     </section>
   );
 }
